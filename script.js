@@ -1,12 +1,9 @@
 const findSum = function(array) {
     // your code here - don't forget to return a number!
-    for (let i = 0; i < array.length; i++) {
-        sum += array[i]
-        // sum = [i] + numbers[i]
-    }
     var sum = array.reduce((sums, numbers) => {
         return sums + numbers
     },0)
+    return sum
     };
     findSum([2,4,6]) //done
     
@@ -103,7 +100,7 @@ const findSum = function(array) {
     
     const removeParenth = function (str) {
         // your code here - don't forget to return a string
-        let newString = str.replace("(not)", "");
+        let newString = str.replace(/ *\([^)]*\) */g, "");
         return newString;
     };
       removeParenth("ido(not)liketocode"); // 'idoliketocode'
